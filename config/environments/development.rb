@@ -15,3 +15,16 @@ config.action_controller.perform_caching             = false
 
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
+
+# config.after_initialize do
+#   ActiveMerchant::Billing::Base.mode = :test
+#   ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
+#     :login => ,
+#     
+#   )
+# end
+
+# config.after_initialize do
+#   ActiveMerchant::Billing::Base.mode = :test
+#   OrderTransaction.gateway = ActiveMerchant::Billing::BogusGateway.new
+# end

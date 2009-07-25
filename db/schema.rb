@@ -9,13 +9,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090723223600) do
+ActiveRecord::Schema.define(:version => 20090724223200) do
 
-  create_table "payments", :force => true do |t|
-    t.string   "note"
-    t.string   "status"
+  create_table "orders", :force => true do |t|
+    t.string   "description"
+    t.integer  "amount"
+    t.string   "state",       :default => "pending", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "payment_transactions", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "amount"
+    t.boolean  "success"
+    t.string   "reference"
+    t.string   "message"
+    t.string   "action"
+    t.text     "params"
+    t.boolean  "test"
   end
 
 end

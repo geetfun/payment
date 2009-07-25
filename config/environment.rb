@@ -15,7 +15,6 @@ Rails::Initializer.run do |config|
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
   
   config.gem "rubyist-aasm", :lib => "aasm"
-  # config.gem "activemerchant", :lib => "active_merchant"
 
   # Specify gems that this application depends on and have them installed with rake gems:install
   # config.gem "bj"
@@ -42,3 +41,4 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 end
+
